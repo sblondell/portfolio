@@ -1,0 +1,25 @@
+extends layout.pug
+
+block title
+  title Library Manager - Books
+
+block content
+  div(class="main-page")
+    h1 Books
+    p(class="main-page")
+      a(href="/books/new", class="button") Create New Book
+  table(class="main-page")
+    thead
+      th Title
+      th Author
+      th Genre
+      th Year
+    tbody
+      each book in books
+        tr
+          td
+            a(href=`/books/${book.id}`) #{book.title}
+          td= book.author
+          td= book.genre 
+          td= book.year
+  include pagination

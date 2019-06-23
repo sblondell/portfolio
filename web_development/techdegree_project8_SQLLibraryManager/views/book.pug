@@ -1,0 +1,25 @@
+extends layout.pug
+
+block title
+  title= book.title
+block content
+  h1 Book Details
+  p
+    label(for="title") Title
+    span= book.title
+  p
+    label(for="author") Author
+    span= book.author
+  p
+    label(for="year") Year
+    span= book.year
+  p
+    label(for="genre") Genre
+    span= book.genre
+  form(action=`/books/${book.id}/delete`, method="post")
+    p
+      a(href=`/books/${bookid}/editbook`, class="button") Edit Book
+    p
+      a(href="/", class="button") Cancel
+    p
+      input(type="submit", value="Delete Book")

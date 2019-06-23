@@ -1,0 +1,45 @@
+extends layout.pug
+
+block title
+  title Edit
+  
+block content
+  h1 Edit Book
+  include formerror
+  form(action=`/books/${bookid}/editbook`, method="post")
+    table
+      thead
+        th 
+        th Before
+        th After  
+      tbody
+        tr
+          td
+            label(for="title") Title
+          td= oldBook.title
+          td
+            input(name="title", type="text", id="title", value=newBook.title)
+        tr
+          td
+            label(for="author") Author
+          td= oldBook.author
+          td 
+            input(name="author", type="text", id="author", value=newBook.author)
+        tr
+          td
+            label(for="year") Year
+          td= oldBook.year
+          td 
+            input(name="year", type="text", id="year", value=newBook.year)
+        tr
+          td
+            label(for="genre") Genre
+          td= oldBook.genre
+          td
+            input(name="genre", type="text", id="genre", value=newBook.genre)
+    br
+    p
+      input(type="submit", value="Confirm Edit")
+    p
+      a(href=`/books/${bookid}`, class="button") Cancel Edit
+  

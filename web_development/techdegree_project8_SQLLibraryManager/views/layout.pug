@@ -1,0 +1,25 @@
+<!DOCTYPE html>                                                                                              
+html(class="no-js" lang="en" dir="ltr")                                                                      
+  head                                                                                                       
+    meta(charset='utf-8')                                                                                    
+    meta(http-equiv='x-ua-compatible', content='ie=edge')                                                    
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')                                   
+    block title
+    link(rel='stylesheet', href='/static/stylesheets/style.css')                                                     
+  body                                                                                                       
+    div
+      a(href='/')
+        h1 LIBRARY MANAGER
+      div
+        form(action="/books/search", method="post")
+          input(type="text", placeholder="Search...", id="search", name="search", class="search_input")
+          label Search Criteria    
+            select(required, name="search_option")
+              option(value="title") Title
+              option(value="author") Author
+              option(value="year") Year
+              option(value="genre") Genre
+          input(type="submit", value="Search")
+    hr
+    div
+      block content

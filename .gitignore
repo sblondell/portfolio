@@ -1,0 +1,12 @@
+#node_modules folders
+
+web_development/techdegree_project7_reactgalleryapp/node_modules/
+web_development/techdegree_project8_SQLLibraryManager/node_modules/
+web_development/techdegree_project9_RESTAPI/node_modules/
+web_development/techdegree_project10_ReactApp_with_RESTAPI/client/node_modules
+web_development/techdegree_project10_ReactApp_with_RESTAPI/client/api/node_modules
+
+#files
+#
+web_development/techdegree_project9_RESTAPI/EDITS
+web_development/techdegree_project10_ReactApp_with_RESTAPI/TODO
