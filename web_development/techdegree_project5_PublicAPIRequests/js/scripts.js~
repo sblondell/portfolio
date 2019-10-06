@@ -99,9 +99,9 @@ function createEmployeeModal(employee) {
 
   var employeeCell = found_employee.cell.replace('-', ' ');
 
-  var employeeStreetNo = found_employee.location.street.number.toString().match(/[0-9]+/)[0];
-  var employeeStreetName = found_employee.location.street.name.match(/[^0-9 ]+/)[0].charAt(0).toUpperCase() +
-    found_employee.location.street.name.match(/[^0-9 ]+/)[0].slice(1);
+  var employeeStreetNo = found_employee.location.street.match(/[0-9]+/)[0];
+  var employeeStreetName = found_employee.location.street.match(/[^0-9 ]+/)[0].charAt(0).toUpperCase() +
+    found_employee.location.street.match(/[^0-9 ]+/)[0].slice(1);
   var employeeStreet = employeeStreetNo + " " + employeeStreetName;
   var employeeCity = found_employee.location.city.charAt(0).toUpperCase() + found_employee.location.city.slice(1);
   var employeeState = found_employee.location.state.charAt(0).toUpperCase() + found_employee.location.state.slice(1);
